@@ -2,274 +2,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Studyhub: Class 10 Mathematics and Science learning and practice.">
-  <title>Studyhub | Class 10 Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free Class 10 Mathematics and Science lessons, examples and practice on Studyhub.">
+<title>Studyhub | Class 10 Learning</title>
 
-  <style>
-    :root {
-      --primary: #176b55;
-      --dark: #143c32;
-      --bg: #f5f8f6;
-      --card: #ffffff;
-      --text: #1e302a;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--card);
-      padding: 16px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #e2eae5;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-      color: var(--primary);
-    }
-
-    nav { display: flex; gap: 18px; flex-wrap: wrap; }
-
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover { color: var(--primary); }
-
-    .hero {
-      background: linear-gradient(135deg, #143c32, #218366);
-      color: white;
-      padding: 65px 7%;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 6vw, 52px);
-      line-height: 1.15;
-      margin: 0 0 18px;
-    }
-
-    .hero p {
-      max-width: 620px;
-      margin: 0 auto 24px;
-      color: #e4f5ed;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #f4d47b;
-      color: #18372b;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 35px 20px;
-    }
-
-    section { margin-bottom: 42px; }
-
-    h2 { color: var(--dark); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid #e0e9e3;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px #173c3210;
-    }
-
-    .card h3 { margin-top: 0; }
-
-    .tag {
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    .chapter {
-      border-top: 1px solid #e6ece8;
-      padding-top: 12px;
-      margin-top: 12px;
-    }
-
-    .quiz {
-      background: #e7f2eb;
-      padding: 24px;
-      border-radius: 14px;
-    }
-
-    .quiz button.option {
-      display: block;
-      width: 100%;
-      text-align: left;
-      background: white;
-      border: 1px solid #cbdcd1;
-      border-radius: 8px;
-      padding: 12px;
-      margin: 9px 0;
-      cursor: pointer;
-      color: var(--text);
-    }
-
-    .quiz button.option:hover { border-color: var(--primary); }
-
-    #feedback { font-weight: bold; }
-
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 24px;
-    }
-
-    footer p { margin: 5px; }
-
-    @media (max-width: 480px) {
-      header { padding: 14px 5%; }
-      nav { gap: 12px; }
-      .hero { padding: 48px 6%; }
-    }
-  </style>
+<style>
+:root {
+  --green:#176b55;
+  --dark:#123d32;
+  --bg:#f3f7f5;
+  --card:#ffffff;
+  --text:#20332b;
+  --muted:#63766b;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0; font-family:Arial,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.7;
+}
+header {
+  background:white; padding:15px 6%;
+  display:flex; justify-content:space-between;
+  align-items:center; gap:12px; flex-wrap:wrap;
+  border-bottom:1px solid #e0e9e3;
+}
+.logo { color:var(--green); font-size:25px; font-weight:800; }
+nav { display:flex; gap:16px; flex-wrap:wrap; }
+nav a { color:var(--text); text-decoration:none; font-weight:bold; }
+nav a:hover { color:var(--green); }
+.hero {
+  padding:55px 6%; text-align:center; color:white;
+  background:linear-gradient(130deg,#123d32,#25896a);
+}
+.hero h1 { font-size:clamp(32px,6vw,49px); line-height:1.2; margin:0; }
+.hero p { max-width:650px; margin:15px auto 23px; }
+.button {
+  border:0; border-radius:9px; padding:11px 17px;
+  background:var(--green); color:white; cursor:pointer;
+  font-weight:bold; font-size:15px;
+}
+.hero .button { background:#f6d889; color:#193b2e; }
+button:hover { filter:brightness(.94); }
+main { max-width:1120px; margin:auto; padding:25px 18px 45px; }
+h2 { color:var(--dark); }
+.layout {
+  display:grid; grid-template-columns:260px minmax(0,1fr);
+  gap:22px; align-items:start;
+}
+.panel,.lesson,.subject-card {
+  background:var(--card); border:1px solid #e0e9e3;
+  border-radius:14px; padding:20px;
+}
+.panel { position:sticky; top:12px; }
+select {
+  width:100%; padding:12px; border-radius:8px;
+  border:1px solid #cbd9d0; background:white;
+  color:var(--text); font-size:15px; margin:8px 0 15px;
+}
+.subjects {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:15px; margin-bottom:25px;
+}
+.subject-card h3 { margin-top:0; }
+.subject-card p { color:var(--muted); }
+.lesson { min-height:350px; }
+.eyebrow {
+  font-size:12px; color:var(--green);
+  font-weight:bold; letter-spacing:1px;
+}
+.lesson h2 { margin:7px 0 14px; }
+.concept {
+  background:#eaf4ed; border-left:4px solid var(--green);
+  padding:14px; border-radius:6px; margin:16px 0;
+}
+.example {
+  background:#f6f7fb; border:1px solid #e5e7ef;
+  border-radius:9px; padding:14px; margin:15px 0;
+}
+.example h3 { margin-top:0; }
+.formula {
+  font-size:18px; font-weight:bold; overflow-wrap:anywhere;
+}
+.lesson li { margin-bottom:8px; }
+.quiz {
+  background:#eaf4ed; padding:18px;
+  border-radius:12px; margin-top:24px;
+}
+.option {
+  display:block; width:100%; text-align:left;
+  padding:12px; margin:9px 0; border-radius:8px;
+  border:1px solid #d3dfd6; background:white;
+  color:var(--text); cursor:pointer; font-size:15px;
+}
+.option:focus,.button:focus { outline:3px solid #e6bd58; }
+#feedback { font-weight:bold; }
+.small { font-size:13px; color:var(--muted); }
+footer {
+  background:var(--dark); color:white; text-align:center;
+  padding:22px;
+}
+footer p { margin:4px; }
+[hidden] { display:none !important; }
+@media(max-width:750px) {
+  .layout { grid-template-columns:1fr; }
+  .panel { position:static; }
+}
+@media(max-width:480px) {
+  header { padding:13px 5%; }
+  nav { gap:10px; font-size:14px; }
+  .subjects { grid-template-columns:1fr; }
+  main { padding:20px 12px 35px; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="logo">Studyhub.</div>
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#subjects">Subjects</a>
-      <a href="#practice">Practice</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">Studyhub.</div>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#learn">Lessons</a>
+    <a href="#practice">Practice</a>
+  </nav>
+</header>
 
-  <section class="hero" id="home">
-    <h1>Learn Smarter.<br>Achieve More.</h1>
-    <p>
-      Your Class 10 learning space for Mathematics and Science.
-      Understand concepts, practise questions and prepare for exams.
-    </p>
-    <a class="btn" href="#subjects">Start Learning</a>
+<section class="hero" id="home">
+  <h1>Class 10, Made Easier.</h1>
+  <p>
+    Learn the concepts, understand the logic and practise
+    questions in Mathematics and Science — one lesson at a time.
+  </p>
+  <a class="button" href="#courses"
+     style="display:inline-block;text-decoration:none">
+    Explore lessons
+  </a>
+</section>
+
+<main>
+  <section id="courses">
+    <h2>Your learning space</h2>
+    <div class="subjects">
+      <article class="subject-card">
+        <div style="font-size:32px">📐</div>
+        <h3>Mathematics</h3>
+        <p>Concepts, formulas, solved examples and problem-solving.</p>
+        <button class="button" onclick="chooseSubject('math')">
+          Learn Mathematics
+        </button>
+      </article>
+      <article class="subject-card">
+        <div style="font-size:32px">🔬</div>
+        <h3>Science</h3>
+        <p>Physics, Chemistry and Biology explained simply.</p>
+        <button class="button" onclick="chooseSubject('science')">
+          Learn Science
+        </button>
+      </article>
+    </div>
   </section>
 
-  <main>
-    <section id="subjects">
-      <h2>Explore Your Subjects</h2>
-      <p>Choose a subject to explore its sample chapters.</p>
+  <section id="learn">
+    <h2>Chapter library</h2>
+    <div class="layout">
+      <aside class="panel">
+        <label for="subject"><strong>1. Choose a subject</strong></label>
+        <select id="subject" onchange="updateChapters()">
+          <option value="math">Mathematics</option>
+          <option value="science">Science</option>
+        </select>
 
-      <div class="grid">
-        <article class="card">
-          <div class="tag">CLASS 10</div>
-          <h3>📐 Mathematics</h3>
-          <p>Build concepts and solve problems step by step.</p>
+        <label for="chapter"><strong>2. Choose a lesson</strong></label>
+        <select id="chapter" onchange="showLesson()"></select>
 
-          <div class="chapter">Real Numbers</div>
-          <div class="chapter">Polynomials</div>
-          <div class="chapter">Pair of Linear Equations</div>
-          <div class="chapter">Quadratic Equations</div>
-          <div class="chapter">Trigonometry</div>
-        </article>
+        <p class="small">
+          More chapters and detailed notes can be added as the
+          course library grows.
+        </p>
+      </aside>
 
-        <article class="card">
-          <div class="tag">CLASS 10</div>
-          <h3>🔬 Science</h3>
-          <p>Understand Physics, Chemistry and Biology.</p>
+      <article class="lesson" id="lesson" aria-live="polite"></article>
+    </div>
+  </section>
 
-          <div class="chapter">Light: Reflection and Refraction</div>
-          <div class="chapter">Electricity</div>
-          <div class="chapter">Chemical Reactions</div>
-          <div class="chapter">Acids, Bases and Salts</div>
-          <div class="chapter">Life Processes</div>
-        </article>
-      </div>
+  <section id="practice">
+    <h2>Quick practice</h2>
+    <div class="quiz">
+      <div class="eyebrow">MATHEMATICS · SAMPLE QUESTION</div>
+      <h3>What is the HCF of 12 and 18?</h3>
+      <button class="option" onclick="answerQuiz(3)">A. 3</button>
+      <button class="option" onclick="answerQuiz(6)">B. 6</button>
+      <button class="option" onclick="answerQuiz(9)">C. 9</button>
+      <button class="option" onclick="answerQuiz(12)">D. 12</button>
+      <p id="feedback" aria-live="polite"></p>
+      <button class="button" onclick="resetQuiz()">Try again</button>
+    </div>
+  </section>
+</main>
 
-      <p><small>
-        These are sample chapter links in the first version.
-        Full lessons will be added next.
-      </small></p>
-    </section>
+<footer>
+  <strong>Studyhub</strong>
+  <p>Learn. Practise. Improve.</p>
+  <p>Class 10 Mathematics and Science</p>
+  <p class="small">Independent learning project; not an official CBSE website.</p>
+</footer>
 
-    <section id="practice">
-      <h2>Quick Practice</h2>
+<script>
+const lessons = {
+  math: [
+    {
+      title:"Real Numbers",
+      topic:"Number systems",
+      intro:"Real numbers include rational and irrational numbers. Rational numbers can be written as p/q, where p and q are integers and q is not zero.",
+      concept:"Euclid's division lemma: for positive integers a and b, a = bq + r, where 0 ≤ r < b.",
+      exampleTitle:"Worked example: Find the HCF of 26 and 91",
+      steps:[
+        "91 = 26 × 3 + 13",
+        "26 = 13 × 2 + 0",
+        "The last non-zero remainder is 13."
+      ],
+      result:"HCF = 13",
+      question:"What is the HCF of 24 and 36?",
+      options:["4","6","12","18"],
+      correct:2,
+      explanation:"36 = 24 × 1 + 12, and 24 = 12 × 2. Therefore, HCF = 12."
+    },
+    {
+      title:"Polynomials",
+      topic:"Zeros of a polynomial",
+      intro:"A polynomial is an algebraic expression made using variables, constants and non-negative integer powers of variables.",
+      concept:"For p(x) = ax² + bx + c, the sum of zeros is −b/a and the product of zeros is c/a, when a ≠ 0.",
+      exampleTitle:"Worked example: x² − 5x + 6",
+      steps:[
+        "Factorise: x² − 5x + 6 = (x − 2)(x − 3).",
+        "Set each factor equal to zero.",
+        "The zeros are x = 2 and x = 3."
+      ],
+      result:"Sum = 5; product = 6",
+      question:"What is the sum of the zeros of x² − 7x + 10?",
+      options:["10","7","−7","−10"],
+      correct:1,
+      explanation:"For ax² + bx + c, the sum is −b/a. Here it is −(−7)/1 = 7."
+    },
+    {
+      title:"Pair of Linear Equations",
+      topic:"Two equations, two unknowns",
+      intro:"A pair of linear equations can represent two straight lines. Their intersection, if unique, gives the solution to both equations.",
+      concept:"For a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0, a unique solution exists when a₁/a₂ ≠ b₁/b₂.",
+      exampleTitle:"Worked example: Solve x + y = 7 and x − y = 1",
+      steps:[
+        "Add the equations: 2x = 8.",
+        "Therefore, x = 4.",
+        "Substitute in x + y = 7: y = 3."
+      ],
+      result:"Solution: x = 4, y = 3",
+      question:"If x + y = 10 and x − y = 2, what is x?",
+      options:["4","5","6","8"],
+      correct:2,
+      explanation:"Adding the equations gives 2x = 12, so x = 6."
+    },
+    {
+      title:"Quadratic Equations",
+      topic:"Equations of degree two",
+      intro:"A quadratic equation has the standard form ax² + bx + c = 0, where a ≠ 0.",
+      concept:"Quadratic formula: x = (−b ± √(b² − 4ac))/(2a). The expression b² − 4ac is called the discriminant.",
+      exampleTitle:"Worked example: Solve x² − 5x + 6 = 0",
+      steps:[
+        "Factorise: (x − 2)(x − 3) = 0.",
+        "Set x − 2 = 0 or x − 3 = 0.",
+        "Therefore, x = 2 or x = 3."
+      ],
+      result:"Roots: 2 and 3",
+      question:"What is the discriminant of x² − 4x + 4 = 0?",
+      options:["0","4","8","16"],
+      correct:0,
+      explanation:"D = b² − 4ac = 16 − 16 = 0."
+    },
+    {
+      title:"Trigonometry",
+      topic:"Ratios in right triangles",
+      intro:"Trigonometric ratios relate an acute angle to the sides of a right-angled triangle.",
+      concept:"sin θ = perpendicular/hypotenuse; cos θ = base/hypotenuse; tan θ = perpendicular/base.",
+      exampleTitle:"Worked example: A 3–4–5 triangle",
+      steps:[
+        "The hypotenuse is 5 units.",
+        "For an angle opposite the side of length 3, sin θ = 3/5.",
+        "For that angle, cos θ = 4/5."
+      ],
+      result:"sin θ = 3/5 and cos θ = 4/5",
+      question:"What is sin 30°?",
+      options:["0","1/2","√3/2","1"],
+      correct:1,
+      explanation:"The standard trigonometric value is sin 30° = 1/2."
+    }
+  ],
+  science: [
+    {
+      title:"Light: Reflection and Refraction",
+      topic:"Physics",
+      intro:"Reflection is the return of light from a surface. Refraction is the change in direction of light when it passes between media because its speed changes.",
+      concept:"For a spherical mirror, using the Cartesian sign convention: 1/f = 1/v + 1/u. Magnification m = −v/u.",
+      exampleTitle:"Worked example: A concave mirror",
+      steps:[
+        "A concave mirror can form real or virtual images depending on the object's position.",
+        "For an object beyond the centre of curvature, the image forms between F and C.",
+        "That image is real, inverted and diminished."
+      ],
+      result:"Always identify the object position before predicting an image.",
+      question:"Which mirror is commonly used as a shaving mirror?",
+      options:["Plane mirror only","Convex mirror","Concave mirror","None of these"],
+      correct:2,
+      explanation:"A concave mirror can produce an enlarged, upright virtual image when the face is within its focal length."
+    },
+    {
+      title:"Electricity",
+      topic:"Physics",
+      intro:"Electric current is the rate of flow of electric charge. Potential difference is the work done per unit charge.",
+      concept:"Ohm's law: V = IR, for a conductor under constant physical conditions. Electric power: P = VI.",
+      exampleTitle:"Worked example: Find current",
+      steps:[
+        "Given voltage V = 12 V and resistance R = 4 Ω.",
+        "Use I = V/R.",
+        "I = 12/4 = 3 A."
+      ],
+      result:"Current = 3 A",
+      question:"A 6 Ω resistor is connected across 12 V. What is the current?",
+      options:["0.5 A","2 A","6 A","72 A"],
+      correct:1,
+      explanation:"I = V/R = 12/6 = 2 A."
+    },
+    {
+      title:"Chemical Reactions",
+      topic:"Chemistry",
+      intro:"A chemical reaction converts reactants into products. Evidence may include a colour change, gas formation, a temperature change or a precipitate.",
+      concept:"A balanced chemical equation has the same number of atoms of each element on both sides.",
+      exampleTitle:"Worked example: Formation of water",
+      steps:[
+        "Start with H₂ + O₂ → H₂O.",
+        "Put 2 before H₂O to balance oxygen.",
+        "Put 2 before H₂ to balance hydrogen."
+      ],
+      result:"2H₂ + O₂ → 2H₂O",
+      question:"Which gas is produced when zinc reacts with dilute hydrochloric acid?",
+      options:["Oxygen","Hydrogen","Nitrogen","Carbon dioxide"],
+      correct:1,
+      explanation:"Zn + 2HCl → ZnCl₂ + H₂. Hydrogen gas is released."
+    },
+    {
+      title:"Acids, Bases and Salts",
+      topic:"Chemistry",
+      intro:"Acids produce H⁺ ions in aqueous solution, while bases produce OH⁻ ions in aqueous solution. Indicators help distinguish acidic and basic solutions.",
+      concept:"The pH scale indicates acidity or basicity: below 7 is acidic, 7 is neutral and above 7 is basic at about 25°C.",
+      exampleTitle:"Worked example: Neutralisation",
+      steps:[
+        "Hydrochloric acid reacts with sodium hydroxide.",
+        "An acid and a base react to form a salt and water.",
+        "HCl + NaOH → NaCl + H₂O."
+      ],
+      result:"Products: sodium chloride and water",
+      question:"What is the pH of a neutral aqueous solution at about 25°C?",
+      options:["1","5","7","14"],
+      correct:2,
+      explanation:"A neutral aqueous solution has pH 7 at about 25°C."
+    },
+    {
+      title:"Life Processes",
+      topic:"Biology",
+      intro:"Life processes include nutrition, respiration, transport and excretion. These processes maintain the functioning of living organisms.",
+      concept:"Photosynthesis uses light energy to make glucose from carbon dioxide and water, releasing oxygen.",
+      exampleTitle:"Worked example: Photosynthesis",
+      steps:[
+        "Plants absorb light using chlorophyll.",
+        "They take in carbon dioxide and water.",
+        "Glucose is formed and oxygen is released."
+      ],
+      result:"6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (in light, with chlorophyll)",
+      question:"Which pigment absorbs light for photosynthesis?",
+      options:["Haemoglobin","Chlorophyll","Insulin","Bile"],
+      correct:1,
+      explanation:"Chlorophyll absorbs light energy used in photosynthesis."
+    }
+  ]
+};
 
-      <div class="quiz">
-        <div class="tag">MATHEMATICS · SAMPLE MCQ</div>
-        <h3>What is the HCF of 12 and 18?</h3>
+let currentLesson = null;
+let quizAnswered = false;
 
-        <button class="option" onclick="checkAnswer(3)">A. 3</button>
-        <button class="option" onclick="checkAnswer(6)">B. 6</button>
-        <button class="option" onclick="checkAnswer(9)">C. 9</button>
-        <button class="option" onclick="checkAnswer(12)">D. 12</button>
+function chooseSubject(subject) {
+  document.getElementById("subject").value = subject;
+  updateChapters();
+  document.getElementById("learn").scrollIntoView({behavior:"smooth"});
+}
 
-        <p id="feedback" aria-live="polite"></p>
-        <button class="btn" onclick="resetQuiz()">Try Again</button>
-      </div>
-    </section>
+function updateChapters() {
+  const subject = document.getElementById("subject").value;
+  const selector = document.getElementById("chapter");
+  selector.replaceChildren();
 
-    <section>
-      <h2>Our Learning Promise</h2>
-      <div class="card">
-        <p>✓ Learn at your own pace.</p>
-        <p>✓ Practise questions with instant feedback.</p>
-        <p>✓ Access the learning website on mobile or computer.</p>
-        <p>✓ Learn without sharing unnecessary personal details.</p>
-      </div>
-    </section>
-  </main>
+  lessons[subject].forEach((lesson, index) => {
+    const option = document.createElement("option");
+    option.value = index;
+    option.textContent = lesson.title;
+    selector.appendChild(option);
+  });
 
-  <footer>
-    <p><strong>Studyhub</strong> — Learn. Practise. Improve.</p>
-    <p>Class 10 Mathematics & Science</p>
-    <p>© 2026 Studyhub</p>
-  </footer>
+  showLesson();
+}
 
-  <script>
-    function checkAnswer(answer) {
-      const feedback = document.getElementById("feedback");
+function showLesson() {
+  const subject = document.getElementById("subject").value;
+  const index = Number(document.getElementById("chapter").value);
+  currentLesson = lessons[subject][index];
+  quizAnswered = false;
 
-      if (answer === 6) {
-        feedback.textContent = "Correct! The HCF is 6.";
+  const root = document.getElementById("lesson");
+  root.replaceChildren();
+
+  function add(tag, text, className) {
+    const el = document.createElement(tag);
+    el.textContent = text;
+    if (className) el.className = className;
+    root.appendChild(el);
+    return el;
+  }
+
+  add("div", currentLesson.topic.toUpperCase() + " · CLASS 10", "eyebrow");
+  add("h2", currentLesson.title);
+  add("p", currentLesson.intro);
+
+  const concept = add("div", "", "concept");
+  const strong = document.createElement("strong");
+  strong.textContent = "Key concept";
+  concept.appendChild(strong);
+  const paragraph = document.createElement("p");
+  paragraph.textContent = currentLesson.concept;
+  concept.appendChild(paragraph);
+
+  const example = add("div", "", "example");
+  const heading = document.createElement("h3");
+  heading.textContent = currentLesson.exampleTitle;
+  example.appendChild(heading);
+
+  const list = document.createElement("ol");
+  currentLesson.steps.forEach(step => {
+    const li = document.createElement("li");
+    li.textContent = step;
+    list.appendChild(li);
+  });
+  example.appendChild(list);
+
+  const result = document.createElement("p");
+  result.className = "formula";
+  result.textContent = currentLesson.result;
+  example.appendChild(result);
+
+  const quiz = add("div", "", "quiz");
+  const label = document.createElement("div");
+  label.className = "eyebrow";
+  label.textContent = "CHECK YOUR UNDERSTANDING";
+  quiz.appendChild(label);
+
+  const question = document.createElement("h3");
+  question.textContent = currentLesson.question;
+  quiz.appendChild(question);
+
+  const feedback = document.createElement("p");
+  feedback.id = "lesson-feedback";
+  feedback.setAttribute("aria-live", "polite");
+
+  currentLesson.options.forEach((option, i) => {
+    const button = document.createElement("button");
+    button.className = "option";
+    button.textContent = String.fromCharCode(65 + i) + ". " + option;
+    button.addEventListener("click", () => {
+      if (quizAnswered) return;
+      quizAnswered = true;
+
+      if (i === currentLesson.correct) {
+        feedback.textContent = "Correct! " + currentLesson.explanation;
         feedback.style.color = "#176b55";
       } else {
-        feedback.textContent = "Not quite. Try again!";
+        feedback.textContent = "Not quite. " + currentLesson.explanation;
         feedback.style.color = "#a12b2b";
       }
-    }
+    });
+    quiz.appendChild(button);
+  });
 
-    function resetQuiz() {
-      document.getElementById("feedback").textContent = "";
-    }
-  </script>
+  quiz.appendChild(feedback);
+}
+
+function answerQuiz(answer) {
+  const feedback = document.getElementById("feedback");
+  if (answer === 6) {
+    feedback.textContent = "Correct! HCF = 6.";
+    feedback.style.color = "#176b55";
+  } else {
+    feedback.textContent = "Try again. Find the largest number dividing both 12 and 18.";
+    feedback.style.color = "#a12b2b";
+  }
+}
+
+function resetQuiz() {
+  document.getElementById("feedback").textContent = "";
+}
+
+updateChapters();
+</script>
 </body>
 </html>
