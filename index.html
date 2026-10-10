@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studyhub: Class 10 Mathematics and Science learning and practice.">
+  <title>Studyhub | Class 10 Learning</title>
+
+  <style>
+    :root {
+      --primary: #176b55;
+      --dark: #143c32;
+      --bg: #f5f8f6;
+      --card: #ffffff;
+      --text: #1e302a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--card);
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e2eae5;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    .hero {
+      background: linear-gradient(135deg, #143c32, #218366);
+      color: white;
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 24px;
+      color: #e4f5ed;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f4d47b;
+      color: #18372b;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    section { margin-bottom: 42px; }
+
+    h2 { color: var(--dark); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e0e9e3;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px #173c3210;
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .tag {
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .chapter {
+      border-top: 1px solid #e6ece8;
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .quiz {
+      background: #e7f2eb;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    .quiz button.option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: white;
+      border: 1px solid #cbdcd1;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 9px 0;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .quiz button.option:hover { border-color: var(--primary); }
+
+    #feedback { font-weight: bold; }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+
+    footer p { margin: 5px; }
+
+    @media (max-width: 480px) {
+      header { padding: 14px 5%; }
+      nav { gap: 12px; }
+      .hero { padding: 48px 6%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Studyhub.</div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#practice">Practice</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Learn Smarter.<br>Achieve More.</h1>
+    <p>
+      Your Class 10 learning space for Mathematics and Science.
+      Understand concepts, practise questions and prepare for exams.
+    </p>
+    <a class="btn" href="#subjects">Start Learning</a>
+  </section>
+
+  <main>
+    <section id="subjects">
+      <h2>Explore Your Subjects</h2>
+      <p>Choose a subject to explore its sample chapters.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="tag">CLASS 10</div>
+          <h3>📐 Mathematics</h3>
+          <p>Build concepts and solve problems step by step.</p>
+
+          <div class="chapter">Real Numbers</div>
+          <div class="chapter">Polynomials</div>
+          <div class="chapter">Pair of Linear Equations</div>
+          <div class="chapter">Quadratic Equations</div>
+          <div class="chapter">Trigonometry</div>
+        </article>
+
+        <article class="card">
+          <div class="tag">CLASS 10</div>
+          <h3>🔬 Science</h3>
+          <p>Understand Physics, Chemistry and Biology.</p>
+
+          <div class="chapter">Light: Reflection and Refraction</div>
+          <div class="chapter">Electricity</div>
+          <div class="chapter">Chemical Reactions</div>
+          <div class="chapter">Acids, Bases and Salts</div>
+          <div class="chapter">Life Processes</div>
+        </article>
+      </div>
+
+      <p><small>
+        These are sample chapter links in the first version.
+        Full lessons will be added next.
+      </small></p>
+    </section>
+
+    <section id="practice">
+      <h2>Quick Practice</h2>
+
+      <div class="quiz">
+        <div class="tag">MATHEMATICS · SAMPLE MCQ</div>
+        <h3>What is the HCF of 12 and 18?</h3>
+
+        <button class="option" onclick="checkAnswer(3)">A. 3</button>
+        <button class="option" onclick="checkAnswer(6)">B. 6</button>
+        <button class="option" onclick="checkAnswer(9)">C. 9</button>
+        <button class="option" onclick="checkAnswer(12)">D. 12</button>
+
+        <p id="feedback" aria-live="polite"></p>
+        <button class="btn" onclick="resetQuiz()">Try Again</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Our Learning Promise</h2>
+      <div class="card">
+        <p>✓ Learn at your own pace.</p>
+        <p>✓ Practise questions with instant feedback.</p>
+        <p>✓ Access the learning website on mobile or computer.</p>
+        <p>✓ Learn without sharing unnecessary personal details.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Studyhub</strong> — Learn. Practise. Improve.</p>
+    <p>Class 10 Mathematics & Science</p>
+    <p>© 2026 Studyhub</p>
+  </footer>
+
+  <script>
+    function checkAnswer(answer) {
+      const feedback = document.getElementById("feedback");
+
+      if (answer === 6) {
+        feedback.textContent = "Correct! The HCF is 6.";
+        feedback.style.color = "#176b55";
+      } else {
+        feedback.textContent = "Not quite. Try again!";
+        feedback.style.color = "#a12b2b";
+      }
+    }
+
+    function resetQuiz() {
+      document.getElementById("feedback").textContent = "";
+    }
+  </script>
+</body>
+</html>
